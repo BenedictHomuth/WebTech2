@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animationseffekte jQuery</title>
+    
+    <style>
+        #group{ padding:2%};
+    </style>
+   
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!--UI-Import because of explode feature-->
+    <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                if($(this).val() === "btn_fade"){
+                    $("#effekt_fade").fadeOut(2000);
+                }else if($(this).val() === "btn_slide"){
+                    $("#effekt_slide").slideUp("slow");
+                }else if($(this).val() === "btn_explode"){
+                    $("#effekt_explode").effect ("explode", { mode : "hide", pieces:8}, 2500);
+                }
+            });
+        });
+    </script>
+
+</head>
+<body>
+        
+    <div id ="group">
+        <button value ="btn_fade">Effekt Fade</button> 
+        <div id ="effekt_fade"style="width:80px;height:80px;background-color:red;"></div>
+    </div>  
+
+    <div id ="group">
+        <button value ="btn_slide">Effekt Slide</button> 
+        <div id ="effekt_slide"style="width:80px;height:80px;background-color:red;"></div>
+    </div>    
+
+    <div id ="group">
+        <button value ="btn_explode">Effekt Explode</button>  
+        <div id ="effekt_explode"style="width:80px;height:80px;background-color:red;"></div>
+    </div>    
+</body>
+</html>
