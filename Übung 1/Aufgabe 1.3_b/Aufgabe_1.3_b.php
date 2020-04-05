@@ -15,7 +15,13 @@
 </body>
 <script>
     $(document).ready(function(){
-        $("#tbox_language").autocomplete("search.php");
-    })
+        $("#tbox_language").autocomplete({source: "search.php"});
+    });
 </script>
 </html>
+
+<?php
+
+
+
+?>
