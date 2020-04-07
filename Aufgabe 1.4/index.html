@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Famous Cities</title>
+  <meta charset="utf-8">
+  <style>
+    body {font-family: Verdana, sans-serif; font-size:0.8em;}
+    header,nav, section,article,footer
+    {border:1px solid grey; margin:5px; padding:8px;}
+    nav ul {margin:0; padding:0;}
+    nav ul li {display:inline; margin:5px;}
+  </style>
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+<header>
+  <h1>Famous Cities</h1>
+</header>
+
+<nav>
+<ul>
+  <li><input type="button" id = "btn" value="Berlin"/></li>
+  <li><input type="button" id = "btn" value="Istanbul"/></li>
+  <li><input type="button" id = "btn" value="Paris"/></li>
+  <li><input type="button" id = "btn" value="London"/></li>
+  <li><input type="button" id = "btn" value="Tokyo"/></li>
+</ul>
+</nav>
+
+<section>
+
+<h1>Detailed Informations</h1>
+
+<article>
+<h2 id="titel">London</h2>
+<p id="inhalt">
+  London is the capital city of England
+  with a metropolitan area of over 13 million inhabitants.
+  It is the most populous city in the United Kingdom.
+</p>
+</article>
+
+<div id = "helli"></div>
+
+</section>
+
+<footer>
+<p>&copy; 2016 FH Südwestfalen.</p>
+</footer>
+
+</body>
+<script>
+
+ function createContent(data){
+   var retString = data.name;
+   
+   if(data.capital){
+     retString += " is the capital of ";
+   }else{
+     retString += " is a city in "
+   }
+   retString +=  data.state + " with a metropolitan area of over "+ data.residents + " residents. " + data.remark;
+
+   return retString;
+ }
+
+  $(document).ready(function(){
+
+    $(document).on("click", "#btn", function(event){
+      $.get( "../Aufgabe 1.4/json/" +this.value+".json", function( data ) {
+        $( "#titel" ).html( data.name );
+        $( "#inhalt" ).html( createContent(data) );
+        console.log(data.name);
+});
+    });
+
+  });
+</script>
