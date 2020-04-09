@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <title>Gesamtpreis mit AngularJS</title>
+</head>
+<body ng-app = "" ng-init = "preis = 0.40; menge =1">
+    <input type="text" name="preis" ng-model = "preis" placeholder="Preis..."> Preis
+    <br>
+    <input type="text" name="menge" ng-model = "menge"  placeholder="Menge..."> Menge
+
+    <p id = "ausgabeGesamtpreis"> Gesamtpreis: {{preis * menge}} €</p>
+    <p id = "tolleAusgabe">Sie erhalten {{menge}} Artikel zu einem Einzelpreis von {{preis}} €!
+        <br> 
+        Der Gesamtbetrag ist somit {{preis * menge}} €
+    </p>
+</body>
+</html>

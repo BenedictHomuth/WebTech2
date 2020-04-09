@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <title>Opacity slider</title>
+</head>
+
+<body ng-app ="" ng-init = "sliderValue = .1">
+    <img src="http://haegar.fh-swf.de/grafik/Haegar_DontBackDown.gif" alt="maDragoooon" style = "opacity : {{sliderValue}}">
+    <br>
+    <input type="range" id="slider" min = 0 max = 1 step="0.01" data-ng-model = "sliderValue" ng-change = "changeOpactiy()">
+    <br>
+    <p>
+        Slider is at {{sliderValue * 100}} %!
+    </p>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+
+    <title>Opacity slider</title>
+</head>
+
+<body ng-app ="myApp" ng-controller = "myCtrl">
+
+<img src="http://haegar.fh-swf.de/grafik/Haegar_DontBackDown.gif" alt="maDragoooon" ng-style = "myOpacity">
+</body>
+<script>
+    var app = angular.module("myApp", []);
+    app.controller("myCtrl", function($scope){
+        //Hier stellen wir den Wert ein, welcher beim Bild geladen wird ?!
+        //FRAGE : Kann man hier Werte dynamisch laden? Mit Slider und ng-change?
+        //          --> unten bei opacity : dann $scope.sliderValue ??
+        $scope.myOpacity = {
+            "opacity" : 0.2            
+        }
+    });
+</script>
+</html>

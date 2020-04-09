@@ -68,10 +68,9 @@
   $(document).ready(function(){
 
     $(document).on("click", "#btn", function(event){
-      $.get( "../Aufgabe 1.4/json/" +this.value+".json", function( data ) {
+      $.get( "../Übung 1.4/json/" +this.value+".json", function( data ) {
         $( "#titel" ).html( data.name );
         $( "#inhalt" ).html( createContent(data) );
-        console.log(data.name);
 });
     });
 
