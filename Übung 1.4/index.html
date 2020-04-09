@@ -20,11 +20,11 @@
 
 <nav>
 <ul>
-  <li><input type="button" id = "btn" value="Berlin"/></li>
-  <li><input type="button" id = "btn" value="Istanbul"/></li>
-  <li><input type="button" id = "btn" value="Paris"/></li>
-  <li><input type="button" id = "btn" value="London"/></li>
-  <li><input type="button" id = "btn" value="Tokyo"/></li>
+  <li><input type="button" value="Berlin"/></li>
+  <li><input type="button" value="Istanbul"/></li>
+  <li><input type="button" value="Paris"/></li>
+  <li><input type="button" value="London"/></li>
+  <li><input type="button" value="Tokyo"/></li>
 </ul>
 </nav>
 
@@ -67,7 +67,7 @@
 
   $(document).ready(function(){
 
-    $(document).on("click", "#btn", function(event){
+    $(document).on("click", ":button", function(event){
       $.get( "../Übung 1.4/json/" +this.value+".json", function( data ) {
         $( "#titel" ).html( data.name );
         $( "#inhalt" ).html( createContent(data) );
