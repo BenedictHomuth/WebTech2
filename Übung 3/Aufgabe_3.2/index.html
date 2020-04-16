@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="websocket.js" defer></script>
+    <title>Websockets</title>
+</head>
+<body>
+    <textarea id="terminal" rows="10" cols="80" readonly></textarea>
+    <p>
+    <input type="text" id="input" size="81" placeholder="Send a message, quit with 'bye'"/>
+    </p>
+    <div>(Connection readyState: <span id="status"></span>)</div>
+    <div id= "activeConnections"></div>
+</body>
+</html>

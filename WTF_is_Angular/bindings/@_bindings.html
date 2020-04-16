@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <title>Passing a String with bindings</title>
+    <script>
+        var app = angular.module("myApp", []);
+        /*
+        app.controller(function(){
+            this.
+        });
+        */
+        
+        //Component for passing a string into an template
+        app.component("readingString", {
+        bindings: { text: '@' },
+        template: '<p>text: <strong>{{$ctrl.text}}</strong></p>'
+        });
+
+        //Component for dynamic input
+        
+        app.component("dynamicInput",{
+            bindings: { in: "="},
+        });
+
+        app.component("dynamicOutput",{
+            bindings: { out: "="},
+        });
+        
+
+    </script>
+</head>
+<body ng-app = "myApp">
+
+    <!--Code for passing a string into a template-->
+    <reading-string text = "hello"></reading-string>
+    <reading-string text = "bye"></reading-string>
+    <br><br><br>
+
+   
+    <!--Code for dynamic input-->
+    
+    <dynamic-input>
+         <input type="text" placeholder="1">
+    </dynamic-input>
+
+
+    <dynamic-output out = "in"> 
+        <div></div>    
+    </dynamic-output>
+
+
+
+
+</body>
+</html>
