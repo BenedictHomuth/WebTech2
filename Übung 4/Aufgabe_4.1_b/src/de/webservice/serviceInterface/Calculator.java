@@ -29,8 +29,40 @@ public interface Calculator {
      */
     @WebMethod
     @WebResult(partName = "return")
+    @Action(input = "http://service.webservice.de/Calculator/divideRequest", output = "http://service.webservice.de/Calculator/divideResponse")
+    public long divide(
+        @WebParam(name = "arg0", partName = "arg0")
+        int arg0,
+        @WebParam(name = "arg1", partName = "arg1")
+        int arg1);
+
+    /**
+     * 
+     * @param arg1
+     * @param arg0
+     * @return
+     *     returns long
+     */
+    @WebMethod
+    @WebResult(partName = "return")
     @Action(input = "http://service.webservice.de/Calculator/addValuesRequest", output = "http://service.webservice.de/Calculator/addValuesResponse")
     public long addValues(
+        @WebParam(name = "arg0", partName = "arg0")
+        int arg0,
+        @WebParam(name = "arg1", partName = "arg1")
+        int arg1);
+
+    /**
+     * 
+     * @param arg1
+     * @param arg0
+     * @return
+     *     returns long
+     */
+    @WebMethod
+    @WebResult(partName = "return")
+    @Action(input = "http://service.webservice.de/Calculator/multiplyRequest", output = "http://service.webservice.de/Calculator/multiplyResponse")
+    public long multiply(
         @WebParam(name = "arg0", partName = "arg0")
         int arg0,
         @WebParam(name = "arg1", partName = "arg1")

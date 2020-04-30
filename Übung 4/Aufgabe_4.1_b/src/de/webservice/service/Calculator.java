@@ -8,7 +8,13 @@ import javax.jws.soap.SOAPBinding.Style;
 @SOAPBinding(style=Style.RPC)
  
 public class Calculator {
-public long addValues(int val1, int val2) {
-return val1 + val2;
-}
+	public long addValues(int val1, int val2) {
+		return val1 + val2;
+	}
+	public long multiply (int val1, int val2){
+		return val1*val2;
+	}
+	public long divide(int val1, int val2){
+		return val1/val2;
+	}
 }
