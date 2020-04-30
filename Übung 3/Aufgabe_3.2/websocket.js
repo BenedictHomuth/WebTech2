@@ -1,6 +1,6 @@
 var onLoad = function () {
     //Magic values
-    var ENTER_KEY = 13;
+    var ENTER_KEYCODE = 13;
     var LINK_TO_SERVER = 'ws://194.94.2.20:8087/eliza';
     
     
@@ -31,7 +31,7 @@ var onLoad = function () {
 
     //Check for input (send message)
     document.getElementById("input").onkeydown = function (event) {
-        if (event.keyCode === ENTER_KEY) {
+        if (event.keyCode === ENTER_KEYCODE) {
             var msg = document.getElementById("input").value;
             if (msg) {
                 connection.send(msg);
@@ -47,4 +47,4 @@ var onLoad = function () {
 //Start script
 onLoad();
 
-//LÖsung Tiere : Katze, Hunde, Pinguin, Pferd
+//Lösung Tiere : Katze, Hunde, Pinguin, Pferd
