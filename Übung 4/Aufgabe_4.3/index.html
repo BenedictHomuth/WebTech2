@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filme</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="../Aufgabe_4.3/index.js"></script>
+    </script>
+
+</head>
+<body>
+    
+    <h3>Die besten Filme aller Zeiten</h3>
+    <div id="tableDB"></div>
+    <br><br>
+    <div id="addFilm">
+        <input type="text" name="name" id="name" placeholder="Name des Films...">
+        <br>
+        <input type="text" name="jahr" id="jahr" placeholder="Erscheinungsjahr">
+        <br>
+        <button id ="sendBtn" onclick="createEntry()">Anlegen</button>
+    </div>
+</body>
+</html>

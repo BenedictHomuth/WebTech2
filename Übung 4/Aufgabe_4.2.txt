@@ -1,0 +1,21 @@
+a) Darf in einer RESTful Webanwendung die Methode GET Inhalte einer Datenbank verändern?
+    -> Nein, GET hat nur die Aufgabe, Inhalte aus einer Datenbank herauszuholen
+
+b) Ist SOAP-RPC und REST kompatibel?
+    ->
+
+c) Ist das REST API von PayPal HATEOAS? Nutzen Sie dafür den REST Playground von PayPal
+(https://devtools-paypal.com/tryit#hateoas)
+  -> HATEOAS: Eine API, wo bei jedem Request alle weiterführdenden Links
+              als href mitgegeben werden, um so keine Dokumentation für die API zu benötigen
+              (Bedienen dadurch wie eine Webseite, also keine Anleitung benötigt!)
+              https://www.youtube.com/watch?v=NK3HNEwDXUk
+
+d*) Was halten Sie von der Meinung von Jeff Knupp (http://www.jeffknupp.com/blog/2014/06/03/
+why-i-hate-hateoas/)?
+    -> Grundsätzlich eine gute Herangehensweise, da man daran gewöhnt ist, wenn man mit 
+       diesen Themen arbeitet, eine Dokumentation zu lesen um zu verstehen wie es aufgebaut ist.
+       
+       -> Eigene Meinung HATEOAS: Produziert relativ viel Traffic, da alle weitergehende Links
+                                  bei allen Request angegeben werden. Dokumentation evtl. 
+                                  "zentraler" als Anfangs-/Einstiegspunkt!
